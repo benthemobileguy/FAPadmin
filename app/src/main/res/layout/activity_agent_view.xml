@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/app_color"
+    tools:context=".EstateAgentsActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/agents_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:fontFamily="serif"
+            android:text="Estate Agents"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/border_color"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.CustomColor"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+    <ScrollView
+        android:layout_below="@+id/progressBar"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+   <TextView
+       android:id="@+id/agent_name"
+       android:text="Benjamin Bright"
+       android:textStyle="bold"
+       android:layout_margin="16dp"
+       android:textSize="22sp"
+       android:gravity="center"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+        <View
+            android:layout_width="wrap_content"
+            android:background="@color/text_color_dark"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="22dp"
+            android:id="@+id/passport"
+            android:layout_marginLeft="8dp"
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:text="Passport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" />
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:src="@drawable/avatar_image"
+            android:layout_height="150dp" />
+        <View
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:background="@color/text_color_dark"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="22dp"
+            android:id="@+id/document_type"
+            android:layout_marginLeft="8dp"
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:text="ID Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" />
+        <ImageView
+            android:id="@+id/document"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:src="@drawable/avatar_image"
+            android:layout_height="150dp" />
+        <View
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:background="@color/text_color_dark"
+            android:layout_height="2dp"/>
+    </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/my_button_bg"
+        android:text="VERIFY"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/verify_btn"
+        android:id="@+id/unverify_btn"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/my_button_bg2"
+        android:text="UNVERIFY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/verify_btn" />
+    </RelativeLayout>
+</RelativeLayout>
